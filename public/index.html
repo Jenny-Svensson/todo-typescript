@@ -4,17 +4,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Web site created using create-snowpack-app" />
+    <link rel="stylesheet" href="dist/index.css">
     <script src="dist/index.js" type="module"></script>
     <title>todo list</title>
   </head>
   <body>
 
+    <h1>Hi, <input type="text" id="inputName" placeholder="your name.." /></h1>
+      <h4>What are we doing today?</h4>
     <form id="new-task-form">
-      <ul id="list"></ul>
+      <label> Task:
       <input type="text" id="new-task-title">
+      </label>
+      <label> Date:
       <input type="date" id="new-task-date">
-      <button type="submit">Add</button>
+        <button type="submit" id="addBtn">Add</button>
+     </label>
+      
+          <ul id="list"></ul>
     </form>
+
+
 
   </body>
 </html>

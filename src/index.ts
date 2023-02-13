@@ -35,7 +35,10 @@ form?.addEventListener("submit", e => {
 
   addListItem(newTask) 
   input.value = "" // clear out the label
+
 });
+
+
 
 function addListItem(task: Task) {
   const item = document.createElement("li");
@@ -48,11 +51,16 @@ function addListItem(task: Task) {
   deleteIcon.addEventListener('click', deleteTask); // will trigger deleteTask() function when clicked
 
   item.appendChild(deleteIcon);
+  //console.table(tasks);
+
 
   // gonna remove child(li) from the parent(ul #list) when clicked
-  function deleteTask() {
+  function deleteTask(e: any) {
     document.getElementById('list')?.removeChild(item);
-  }
+    //tasks.splice(item, 1);
+    //console.table(tasks);
+    saveTasks();
+  };
 
   // gonna change the task.completed to true or false depending on checked or not.
   checkbox.addEventListener("change", () => {
@@ -69,7 +77,6 @@ function addListItem(task: Task) {
   list?.append(item);
 
 };
-
 
 function saveTasks() {
   localStorage.setItem("TASKS", JSON.stringify(tasks)); // gonna set an item called TASKS and stringify our tasks

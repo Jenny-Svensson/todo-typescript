@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+body {
+    color: #dfdfdf;
+    background-color: #202020;
+    font-family: 'Asap', sans-serif;
+}
+
+#new-task-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 5px;
+    background-color: #5c9994;
+    border-radius: 10px;
+    padding: 10px;
+    width: 16.3rem;
+
+}
+
+#inputName {
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(65, 65, 65);
+    background-color: #202020;
+    color: white;
+}
+
+#inputName:focus {
+    outline: none;
+}
+
+label {
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: -40px;
+    letter-spacing: 1px;
+}
